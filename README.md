@@ -1,7 +1,5 @@
 # Food Log App
-
-![Food Log App]<![image](https://github.com/user-attachments/assets/e5f523ec-31ed-44b6-b7fd-88db3f3c3e3c)
->
+![image](https://github.com/user-attachments/assets/5130930a-840d-4f90-8743-218267068e60)
 
 ## Overview
 
@@ -19,25 +17,24 @@ The **Food Log App** is a simple and user-friendly application that allows users
 ## Screenshots
 
 ### Home Page
-![Home Page] <![image](https://github.com/user-attachments/assets/aa39db90-6452-4c8b-8146-b2483b75865a)
->
+![image](https://github.com/user-attachments/assets/aa39db90-6452-4c8b-8146-b2483b75865a)
+
 
 The Home Page welcomes users and provides options to search for food items or view the food log.
 
 ### Search Page
-![Search Page]<![image](https://github.com/user-attachments/assets/8b53d2f7-f06a-44cd-8f89-ec12bc35ab25)
->
+![image](https://github.com/user-attachments/assets/8b53d2f7-f06a-44cd-8f89-ec12bc35ab25)
 
 The Search Page allows users to find food items and log them to track their nutrition.
 
 ### Food Log Page
-![Food Log Page] <![image](https://github.com/user-attachments/assets/6d668b61-a0e5-4a3e-9427-99b5d2867146)
->
+![image](https://github.com/user-attachments/assets/6d668b61-a0e5-4a3e-9427-99b5d2867146)
 
 The Food Log Page provides a summary of the user's food intake, along with personalized recommendations and a visual representation of their nutrient intake.
 
 ### Set Goals Page
-![Set Goals Page](https://via.placeholder.com/1200x600) <!-- Add your own screenshot URL here -->
+![image](https://github.com/user-attachments/assets/b66d3951-ce57-4118-bfc4-197996c1cae1)
+
 
 The Set Goals Page allows users to set and save their daily nutritional goals.
 
