@@ -405,16 +405,7 @@ body {
     }
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .log-summary {
-      width: 100%;
-    }
-  
-    .recommendations-container {
-      width: 100%;
-    }
-  }
+
   
   /* Set Goals Page */
 .set-goals-container {
@@ -474,3 +465,110 @@ body {
     border-radius: 10px;  /* Optional: Add rounded corners to the images */
   }
   
+/* Navbar Styling */
+.navbar {
+  background-color: #2c3e50;  /* Dark Navy */
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.navbar-links li {
+  margin: 10px;
+}
+
+.navbar-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Button color */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+/* General Mobile Styles */
+@media (max-width: 768px) {
+  .home-container, .set-goals-container, .log-page-container {
+    padding: 20px 10px;  /* Reduce padding on mobile */
+  }
+
+  .dashboard-card {
+    margin-bottom: 20px; /* Add more space between cards */
+  }
+
+  .dashboard-image {
+    height: 150px; /* Reduce image size on mobile */
+  }
+
+  .container {
+    padding: 10px; /* Adjust container padding */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack items vertically on mobile */
+  }
+
+  .navbar-btn {
+    width: 100%;  /* Make buttons full-width on smaller screens */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+/* Writing Format */
+.writing-format {
+  font-style: italic;
+  color: #6c757d;
+  font-size: 1.1em;
+  margin: 20px 0;
+}
+
+/* Typewriter Effect */
+.typewriter {
+  overflow: hidden; 
+  border-right: .15em solid #007bff; /* Cursor effect */
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #007bff; }
+}
+
+@media (max-width: 768px) {
+  .dashboard-card {
+    margin-bottom: 20px; /* Add more space between cards on mobile */
+  }
+
+  .dashboard-image {
+    height: 150px; /* Reduce image size on mobile */
+  }
+}
