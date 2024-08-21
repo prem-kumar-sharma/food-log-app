@@ -50,6 +50,10 @@ const FoodSearch = ({ onAddFood }) => {
 
   return (
     <div>
+      <div className="search-header">
+        <h1>Search for Food</h1>
+        <p>Find food items and log them to track your nutrition.</p>
+      </div>
       <div className="search-container">
         <input
           type="text"
