@@ -6,8 +6,9 @@ const Navbar = () => {
     <nav>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/search">Search Food</Link></li>  {/* Link to Search page */}
+        <li><Link to="/search">Search Food</Link></li>
         <li><Link to="/log">Food Log</Link></li>
+        <li><Link to="/goals">Set Goals</Link></li>  {/* Link to Set Goals page */}
       </ul>
     </nav>
   );

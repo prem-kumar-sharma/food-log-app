@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import FoodSearch from './components/FoodSearch';
 import LogPage from './pages/LogPage';
-import NutritionalGoals from './components/NutritionalGoals';  // Import the component
+import SetGoalsPage from './pages/SetGoalsPage';  // Import the Set Goals page
 
 function App() {
   const [foodLog, setFoodLog] = useState([]);
@@ -34,10 +34,6 @@ function App() {
     setFoodLog([...foodLog, foodItem]);
   };
 
-  const saveGoals = (newGoals) => {
-    setGoals(newGoals);
-  };
-
   return (
     <Router>
       <Navbar />
@@ -46,7 +42,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<FoodSearch onAddFood={addFoodToLog} />} />
           <Route path="/log" element={<LogPage foodLog={foodLog} goals={goals} />} />  {/* Pass goals to LogPage */}
-          <Route path="/goals" element={<NutritionalGoals onSaveGoals={saveGoals} />} />  {/* Add Goals route */}
+          <Route path="/goals" element={<SetGoalsPage />} />
         </Routes>
       </div>
     </Router>

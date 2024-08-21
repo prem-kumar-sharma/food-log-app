@@ -36,6 +36,19 @@ const Home = () => {
             <button className="dashboard-btn">Go to Food Log</button>
           </Link>
         </div>
+
+        <div className="dashboard-card">
+          <img 
+            src="https://media.stack.com/stack-content/uploads/2016/12/12033000/Nutrition-Goals-STACK.jpg" 
+            alt="Set Goals" 
+            className="dashboard-image"
+          />
+          <h2>Set Goals</h2>
+          <p>Set your daily nutritional goals to stay on track.</p>
+          <Link to="/goals">
+            <button className="dashboard-btn">Set Goals Now</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
