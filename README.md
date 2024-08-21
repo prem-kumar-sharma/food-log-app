@@ -17,7 +17,7 @@ The **Food Log App** is a simple and user-friendly application that allows users
 ## Screenshots
 
 ### Home Page
-![image](https://github.com/user-attachments/assets/aa39db90-6452-4c8b-8146-b2483b75865a)
+![image](https://github.com/user-attachments/assets/5130930a-840d-4f90-8743-218267068e60)
 
 
 The Home Page welcomes users and provides options to search for food items or view the food log.
