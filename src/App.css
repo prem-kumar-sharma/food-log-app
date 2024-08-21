@@ -12,15 +12,9 @@ h1, h2, h3 {
   color: #343a40;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 /* Navbar Styling */
 .navbar {
-  background-color: #2c3e50;
+  background-color: white;  /* Change navbar background to white */
   padding: 15px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -50,22 +44,32 @@ h1, h2, h3 {
 
 .navbar-btn {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: #007bff;
+  padding: 10px 20px;
+  background-color: #28a745;  /* Set button color to green */
   color: white;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1em;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  width: 200px; /* Set a fixed width for consistency */
+  width: 150px;  /* Adjust the width of the buttons */
   text-align: center;
 }
 
 .navbar-btn:hover {
-  background-color: #0056b3;
+  background-color: #218838;
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove Blue Line */
+.typewriter {
+  overflow: hidden; 
+  border-right: none;  /* Remove the blue line (caret effect) */
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; /* Adjust as needed */
+  max-width: 100%; /* Ensure the text doesn't overflow the container */
+  display: inline-block; /* Allow the text to wrap */
 }
 
 /* Responsive Design for Navbar */
@@ -75,13 +79,24 @@ h1, h2, h3 {
   }
 
   .navbar-links {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;  /* Keep buttons in a row on mobile */
+    justify-content: space-between;
   }
 
   .navbar-btn {
-    width: 200px;  /* Keep the width consistent on mobile */
-    margin: 10px 0;
+    width: auto;  /* Keep buttons the same size on mobile */
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links {
+    flex-direction: column;
+  }
+  
+  .navbar-btn {
+    width: 100%;  /* Make buttons full-width on very small screens */
+    margin: 5px 0;
   }
 }
 
