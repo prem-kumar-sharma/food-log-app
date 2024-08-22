@@ -74,31 +74,7 @@ h1, h2, h3 {
 }
 
 
-/* Simple Typewriter Effect (One-Time Typing) */
-.typewriter {
-  overflow: hidden; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .15em;
-  display: inline-block; 
-  animation: typing 3.5s steps(40, end) 1;  /* One-time typing effect */
-  border-right: none;  /* Remove the blinking cursor */
-}
-
-/* Typing animation */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-
-/* Blinking caret animation */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: transparent }  /* Hide the caret after blinking */
-}
-
-/* Home Page Styling */
+/* General Home Styles */
 .home-container {
   text-align: center;
   padding: 60px 20px;
@@ -186,6 +162,33 @@ h1, h2, h3 {
 .dashboard-btn:hover {
   background-color: #0056b3;
   transform: scale(1.05);
+}
+
+/* Typewriter Effect */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #007bff;
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #007bff; }
+}
+
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: transparent }  /* Hide the caret after blinking */
 }
 
 /* Chart Styling */
