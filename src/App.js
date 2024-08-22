@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar'; // Navbar remains
 import Home from './pages/Home';
 import FoodSearch from './components/FoodSearch';
 import LogPage from './pages/LogPage';
@@ -42,7 +42,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<FoodSearch onAddFood={addFoodToLog} />} />
           <Route path="/log" element={<LogPage foodLog={foodLog} goals={goals} />} />  {/* Pass goals to LogPage */}
-          <Route path="/goals" element={<SetGoalsPage />} />
+          <Route path="/goals" element={<SetGoalsPage setGoals={setGoals} />} />
         </Routes>
       </div>
     </Router>

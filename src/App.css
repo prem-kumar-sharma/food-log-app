@@ -14,28 +14,24 @@ h1, h2, h3 {
 
 /* Navbar Styling */
 .navbar {
-  background-color: white;  /* Change navbar background to white */
+  background-color: white;
   padding: 15px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-}
-
-.navbar-container {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center the content */
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
+/* Align buttons in the same line on desktop */
 .navbar-links {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 .navbar-links li {
@@ -45,13 +41,13 @@ h1, h2, h3 {
 .navbar-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #28a745;  /* Set button color to green */
+  background-color: #28a745;  /* Green button color */
   color: white;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  width: 150px;  /* Adjust the width of the buttons */
+  width: 150px;
   text-align: center;
 }
 
@@ -61,45 +57,46 @@ h1, h2, h3 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Remove Blue Line */
-.typewriter {
-  overflow: hidden; 
-  border-right: none;  /* Remove the blue line (caret effect) */
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .15em; /* Adjust as needed */
-  max-width: 100%; /* Ensure the text doesn't overflow the container */
-  display: inline-block; /* Allow the text to wrap */
-}
-
 /* Responsive Design for Navbar */
 @media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;
+  .navbar {
+    flex-direction: column; /* Stack items vertically on mobile */
   }
 
   .navbar-links {
-    flex-direction: row;  /* Keep buttons in a row on mobile */
-    justify-content: space-between;
+    flex-direction: column; /* Stack buttons vertically */
   }
 
   .navbar-btn {
-    width: auto;  /* Keep buttons the same size on mobile */
-    margin: 10px;
+    width: 100%;  /* Full-width buttons */
+    margin: 10px 0;
   }
 }
 
-@media (max-width: 480px) {
-  .navbar-links {
-    flex-direction: column;
-  }
-  
-  .navbar-btn {
-    width: 100%;  /* Make buttons full-width on very small screens */
-    margin: 5px 0;
-  }
+
+/* Simple Typewriter Effect (One-Time Typing) */
+.typewriter {
+  overflow: hidden; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em;
+  display: inline-block; 
+  animation: typing 3.5s steps(40, end) 1;  /* One-time typing effect */
+  border-right: none;  /* Remove the blinking cursor */
 }
 
+/* Typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: transparent }  /* Hide the caret after blinking */
+}
 
 /* Home Page Styling */
 .home-container {
@@ -189,90 +186,6 @@ h1, h2, h3 {
 .dashboard-btn:hover {
   background-color: #0056b3;
   transform: scale(1.05);
-}
-
-/* Search Bar */
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-input[type="text"] {
-  padding: 12px 16px;
-  border-radius: 5px;
-  border: 1px solid #ced4da;
-  margin-right: 10px;
-  width: 300px;
-  max-width: 100%;
-  transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus {
-  border-color: #007bff;
-}
-
-.serving-input {
-  width: 60px;
-  margin-right: 10px;
-}
-
-button {
-  padding: 12px 20px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-  background-color: #218838;
-  transform: scale(1.05);
-}
-
-/* Search Results */
-.results-container ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.result-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-  transition: background-color 0.3s ease;
-}
-
-.result-item:hover {
-  background-color: #f1f1f1;
-}
-
-.result-item img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-right: 20px;
-}
-
-.food-label {
-  flex-grow: 1;
-  font-weight: 500;
-}
-
-/* Message */
-.message {
-  color: #28a745;
-  font-weight: bold;
-  margin-top: 20px;
-  text-align: center;
-  animation: fadeIn 0.5s ease;
 }
 
 /* Chart Styling */
@@ -400,50 +313,145 @@ button:hover {
   background-color: #218838;
 }
 
-/* Writing Format */
-.writing-format {
-  font-style: italic;
-  color: #6c757d;
-  font-size: 1.1em;
-  margin: 20px 0;
-}
-
-/* Typewriter Effect Fix */
-.typewriter {
-  overflow: hidden; 
-  border-right: .15em solid #007bff; /* Cursor effect */
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end 5;  /* Limit the blinking */
-  max-width: 100%; /* Ensure the text doesn't overflow the container */
-  display: inline-block; /* Allow the text to wrap */
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #007bff; }
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  .typewriter {
-    font-size: 1.2em; /* Adjust font size for smaller screens */
-    max-width: 90%; /* Ensure it doesn't touch the edges on mobile */
-    white-space: normal; /* Allow the text to wrap */
+  .home-container, .set-goals-container, .log-page-container {
+      padding: 20px 10px;  /* Reduce padding on mobile */
+  }
+
+  .dashboard-options {
+      flex-direction: column; /* Stack cards vertically on mobile */
+      align-items: center; /* Center the cards */
+  }
+
+  .dashboard-card {
+      width: 100%; /* Make cards full width */
+      max-width: 400px; /* Add a max-width to keep the design neat */
+      margin-bottom: 20px; /* Add space between cards */
+      text-align: center; /* Center-align text for mobile */
+      box-sizing: border-box; /* Ensure padding and borders are included in the width */
+  }
+
+  .dashboard-image {
+      width: 100%; /* Ensure images are responsive */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px;
+  }
+
+  .navbar-btn {
+      width: 100%;  /* Make navbar buttons full-width */
+      text-align: center;
+      margin-bottom: 10px;
+  }
+
+  h1, p {
+      font-size: 1.5em; /* Adjust font sizes for smaller screens */
+      text-align: center;
   }
 }
 
-/* Animations */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+/* Additional Tweaks for Extra Small Devices */
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.2em;
+  }
+
+  p {
+      font-size: 1em;
+  }
+
+  .dashboard-card {
+      padding: 10px;
+  }
+
+  .typewriter {
+      font-size: 1.1em; /* Adjust typewriter font size for smaller screens */
+      white-space: normal; /* Ensure text wraps */
+      width: 100%;
+  }
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #007bff; }
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
+input[type="text"] {
+  padding: 12px 16px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  margin-right: 10px;
+  width: 300px;
+  max-width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Search Results */
+.results-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.result-item:hover {
+  background-color: #f1f1f1;
+}
+
+.result-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.food-label {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+/* Message */
+.message {
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Fade In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -453,82 +461,46 @@ button:hover {
   }
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+/* Scale on Hover */
+.result-item:hover {
+  transform: scale(1.02);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Pulse Effect */
+button:active {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Recommendations Container */
+.recommendations-container {
+  background-color: #e8f0fe;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  animation: slideInUp 1.2s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .home-container, .set-goals-container, .log-page-container {
-    padding: 20px 10px;  /* Reduce padding on mobile */
-  }
-
-  .dashboard-options {
-    flex-direction: column; /* Stack cards vertically on mobile */
-    align-items: center; /* Center the cards */
-  }
-
-  .dashboard-card {
-    width: 100%; /* Make cards full width */
-    max-width: 400px; /* Add a max-width to keep the design neat */
-    margin-bottom: 20px; /* Add space between cards */
-    text-align: center; /* Center-align text for mobile */
-    box-sizing: border-box; /* Ensure padding and borders are included in the width */
-  }
-
-  .dashboard-image {
-    width: 100%; /* Ensure images are responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
-  }
-
-  .navbar-btn {
-    width: 100%;  /* Make navbar buttons full-width */
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  h1, p {
-    font-size: 1.5em; /* Adjust font sizes for smaller screens */
-    text-align: center;
-  }
-}
-
-/* Additional Tweaks for Extra Small Devices */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.2em;
-  }
-
-  p {
-    font-size: 1em;
-  }
-
-  .dashboard-card {
-    padding: 10px;
-  }
-
-  .typewriter {
-    font-size: 1.1em; /* Adjust typewriter font size for smaller screens */
-    white-space: normal; /* Ensure text wraps */
-    width: 100%;
-  }
+.recommendation-item {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease;
 }
