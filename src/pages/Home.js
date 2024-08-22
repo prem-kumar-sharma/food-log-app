@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Typical from 'react-typical'; // Import react-typical
+import Typewriter from 'typewriter-effect';
 
 const Home = () => {
   return (
     <div className="home-container">
       <h1 className="typewriter">
-        <Typical
-          steps={['Welcome to the Food Log App', 3000]} // Typing effect with delay
-          wrapper="span"
+        <Typewriter
+          options={{
+            strings: ['Welcome to the Food Log App'],
+            autoStart: true,
+            delay: 75,  // Typing speed
+            pauseFor: 3000,  // Time to pause after typing
+            cursor: '',
+            deleteSpeed: 0,
+            loop: false,
+          }}
         />
       </h1>
       <p>Your journey to better nutrition starts here!</p>
