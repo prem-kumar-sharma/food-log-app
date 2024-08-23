@@ -1,7 +1,6 @@
 
 # Food Log App
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/30eb563e-1bcf-49fa-83aa-300391479de8/deploy-status)](https://illustrious-narwhal-496cf6.netlify.app/)
 
 The **Food Log App** is a simple and user-friendly application that allows users to track their daily food intake, set nutritional goals, and receive personalized recommendations based on their nutrient intake. The app provides a visual representation of the user's calorie and nutrient intake, making it easy to monitor progress toward health goals.
 
